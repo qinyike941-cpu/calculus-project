@@ -1,0 +1,339 @@
+---
+title: "Two Problems, One Theory: How Tangents and Areas Shaped Calculus"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    theme: cosmo
+---
+
+## Introduction: Two Problems Behind Calculus
+
+The history of calculus can be understood through two old problems. One problem was about areas: how can we find the exact area of a curved region? The other problem was about tangents: how can we find the direction of a curve at a single point?
+
+At first, these two questions seemed unrelated. The area problem came from ancient geometry, while the tangent problem became important later when mathematicians studied curves, motion, and change. However, the surprising discovery of calculus was that these two problems are deeply connected. The area problem eventually developed into integration, and the tangent problem eventually developed into differentiation. The Fundamental Theorem of Calculus later showed that these two operations are inverse to each other.
+
+The central question of this project is:
+
+**How did the historically separate problems of tangents and areas become two inverse operations within a single theory?**
+
+This question gives calculus a historical direction. Calculus was not simply invented in one moment by one person. It developed through a long process: from ancient geometry, to methods of approximation, to algebraic curves, to tangent methods, to a unified theory of change and accumulation.
+
+## 1. The Ancient Search for Areas
+### Ancient Geometry and the Area Problem
+The story begins with the area problem. In ancient mathematics, many simple shapes already had clear formulas. For example, the area of a rectangle is
+
+$$
+A=lw.
+$$
+
+The area of a triangle is
+
+$$
+A=\dfrac{1}{2}bh.
+$$
+
+These formulas work well for straight-sided figures. However, curved regions are much harder. For example, consider the curve
+
+$$
+y=x^2.
+$$
+
+How can we find the exact area between this curve and the x-axis? Ordinary geometric formulas are not enough, because the boundary is curved rather than straight.
+
+This difficulty pushed ancient mathematicians to think in a new way. Instead of trying to find one simple formula immediately, they asked whether a curved region could be approximated by many simpler shapes. This was the beginning of an important historical idea: a complicated curved area may be understood by breaking it into many simpler pieces.
+
+This idea did not yet look like modern integration, but it prepared the ground for it.
+
+### Eudoxus and the Method of Exhaustion
+
+The next important step came from ancient Greek mathematics. Eudoxus developed the method of exhaustion, a technique for finding areas and volumes by approximation.
+
+The basic idea was to place simpler shapes inside or around a curved shape, then improve the approximation again and again. For example, a circle can be approximated by regular polygons with more and more sides:
+
+$$
+A_6<A_{12}<A_{24}<\cdots<A_{\text{circle}}.
+$$
+
+Here, \(A_6\) represents the area of an inscribed polygon with 6 sides, \(A_{12}\) represents the area of one with 12 sides, and so on. As the number of sides increases, the polygon gets closer to the circle.
+
+This method is historically important because it contains an early form of limit thinking. Greek mathematicians did not use the modern notation of limits, but they already understood that a sequence of approximations could get closer and closer to a desired value.
+
+The area problem therefore moved forward in history. Curved areas could be approached by a process of increasingly accurate approximation. This was one of the earliest ancestors of integration.
+
+### Archimedes and Infinite Summation
+
+Archimedes pushed the area problem even further. One famous example is his work on the area of a parabolic segment. Instead of treating the curved region as impossible to measure, Archimedes divided it into many smaller triangles.
+
+The areas of these triangles followed a pattern similar to an infinite geometric series:
+
+$$
+A+\dfrac{1}{4}A+\dfrac{1}{16}A+\cdots.
+$$
+
+The numerical part of this sum is
+
+$$
+1+\dfrac{1}{4}+\dfrac{1}{16}+\cdots=\dfrac{4}{3}.
+$$
+
+This showed that a curved area could be calculated by adding infinitely many smaller parts. In modern language, this sounds very close to integration, even though Archimedes was still working within Greek geometry rather than modern calculus.
+
+This was a major historical step. The area problem was no longer only about drawing a clever geometric figure. It was becoming connected to the idea of infinite summation. Area could be understood as the total accumulation of many smaller areas. This idea would later become one of the central meanings of the integral.
+
+### Cavalieri and Early Integration
+
+Many centuries later, in the seventeenth century, the area problem reappeared in a new form. Bonaventura Cavalieri developed the method of indivisibles. He imagined plane figures as being made of infinitely many lines, and solids as being made of infinitely many slices.
+
+This was historically important because it changed how mathematicians imagined area. Instead of only approximating a curved region from the outside or inside, mathematicians began to think of a region as an accumulation of infinitely many small parts.
+
+In modern terms, this is close to the idea that an area can be represented by an integral:
+
+$$
+\int_a^b f(x)\,d x.
+$$
+
+However, Cavalieri's method also had a logical difficulty. A line has no width, so how can infinitely many lines create an area? This question showed that early methods involving infinitesimals were powerful but not fully rigorous.
+
+Still, Cavalieri's work helped move mathematics closer to integration. The historical development was now clear: the area problem had moved from geometry, to approximation, to infinite summation, and then toward the idea of accumulation.
+
+## 2. From Curves to Tangents
+### Descartes and Curves as Equations
+
+While the area problem was moving toward integration, another important development changed the way mathematicians studied curves. Rene Descartes introduced analytic geometry, which allowed curves to be represented by equations.
+
+For example, instead of thinking of a parabola only as a geometric shape, mathematicians could write it as
+
+$$
+y=x^2.
+$$
+
+This was a huge step toward calculus. Once a curve could be written as an equation, it could be studied using algebra. Questions about curves became questions about functions, variables, and formulas.
+
+This change made the tangent problem much more manageable. If a curve is represented by an equation, then mathematicians can try to calculate the slope of the curve at a point.
+
+In other words, Descartes helped create the language that later allowed Fermat, Newton, and Leibniz to study tangent lines and rates of change more systematically.
+
+### Fermat and the Tangent Problem
+
+The tangent problem asks: how can we find the slope of a curve at one point?
+
+For a straight line through two points, the slope is easy to calculate:
+
+$$
+m=\dfrac{y_2-y_1}{x_2-x_1}.
+$$
+
+But for a curve, the tangent line touches the curve at a single point. Since there is only one point, we cannot directly use the slope formula for two points.
+
+Fermat's idea was to first take two nearby points on the curve and calculate the slope of the secant line. Then the second point is allowed to move closer and closer to the first point. In modern notation, the secant slope is
+
+$$
+\dfrac{f(x+h)-f(x)}{h}.
+$$
+
+For example, let
+
+$$
+f(x)=x^2.
+$$
+
+Then the secant slope is
+
+$$
+\dfrac{(x+h)^2-x^2}{h}.
+$$
+
+After expanding the numerator, we get
+
+$$
+\dfrac{x^2+2xh+h^2-x^2}{h}.
+$$
+
+This simplifies to
+
+$$
+\dfrac{2xh+h^2}{h}=2x+h.
+$$
+
+As \(h\) approaches zero, \(2x+h\) approaches \(2x\). In modern notation, we write
+
+$$
+\dfrac{d}{d x}x^2=2x.
+$$
+
+This calculation shows how the tangent problem gradually developed into the derivative. Fermat did not yet have the modern limit definition, but his method already contained the main idea: a tangent slope can be found as the limiting value of secant slopes.
+
+### Tangents Become Rates of Change
+
+The tangent problem was not only important in geometry. It also became important in the study of motion.
+
+If the position of an object is represented by
+
+$$
+s=s(t),
+$$
+
+then the average velocity over a short time interval is
+
+$$
+\dfrac{s(t+h)-s(t)}{h}.
+$$
+
+The instantaneous velocity is obtained by letting \(h\) approach zero:
+
+$$
+\dfrac{d s}{d t}
+=
+\lim_{h\to0}\dfrac{s(t+h)-s(t)}{h}.
+$$
+
+This shows the connection between geometry and physics. In geometry, the derivative gives the slope of a tangent line. In physics, the derivative gives an instantaneous rate of change, such as velocity.
+
+This connection was especially important for Newton. Newton's version of calculus grew partly out of his study of motion. He thought about quantities that flowed or changed over time. The derivative was therefore not only a tool for drawing tangents; it became a way to describe change in the natural world.
+
+By this stage, the tangent problem had developed into a much broader idea: the derivative measures local rate of change.
+
+## 3. Two Paths Begin to Meet
+### Barrow and the Hidden Connection
+
+By the middle of the seventeenth century, mathematicians had developed methods for both areas and tangents. The area problem was moving toward integration, and the tangent problem was moving toward differentiation. The next major historical step was to understand that these two methods were not independent.
+
+Isaac Barrow, Newton's teacher, played an important role in this transition. Barrow recognized that tangent problems and area problems were closely related. This was a crucial turning point in the history of calculus.
+
+For centuries, the two problems had developed along different paths. The area problem was about global accumulation: adding up many small parts to find a total. The tangent problem was about local rate of change: finding what happens at a single point.
+
+Barrow helped reveal that these two ideas were secretly connected. This connection prepared the way for Newton and Leibniz to build calculus as a unified theory rather than a collection of separate techniques.
+
+This is where the title of this project becomes meaningful: two problems were beginning to become one theory.
+
+### Newton and Leibniz: Building a System
+
+Newton and Leibniz are usually called the founders of calculus. However, this does not mean that no one studied areas or tangents before them. As this history shows, many earlier mathematicians had already developed important ideas.
+
+Newton and Leibniz were important because they systematized these ideas. They turned scattered methods into a general theory.
+
+Newton approached calculus through motion and change. His work was closely connected with physics. He studied quantities that changed over time, such as position, velocity, and acceleration.
+
+Leibniz developed powerful notation and rules of calculation. The notation
+
+$$
+\dfrac{d y}{d x}
+$$
+
+and
+
+$$
+\int f(x)\,d x
+$$
+
+comes from the Leibniz tradition and is still used today.
+
+Their work made calculus into a usable mathematical system. It was no longer only a collection of special tricks for individual problems. It became a general language for studying change, motion, area, and accumulation.
+
+## 4. One Theory: The Fundamental Theorem of Calculus
+### The Fundamental Theorem of Calculus
+
+The deepest connection between the area problem and the tangent problem is expressed by the Fundamental Theorem of Calculus.
+
+Suppose we define an area function:
+
+$$
+A(x)=\int_a^x f(t)\,d t.
+$$
+
+This function gives the accumulated area under \(f(t)\) from \(a\) to \(x\). If \(x\) increases to \(x+h\), the added area is
+
+$$
+A(x+h)-A(x)=\int_x^{x+h} f(t)\,d t.
+$$
+
+When \(h\) is very small, this added area is approximately a rectangle with height \(f(x)\) and width \(h\):
+
+$$
+A(x+h)-A(x)\approx f(x)h.
+$$
+
+Dividing by \(h\), we get
+
+$$
+\dfrac{A(x+h)-A(x)}{h}\approx f(x).
+$$
+
+As \(h\to0\), this becomes
+
+$$
+\dfrac{d A}{d x}=f(x).
+$$
+
+Therefore,
+
+$$
+\dfrac{d}{d x}\int_a^x f(t)\,d t=f(x).
+$$
+
+This means that if we first build an area function and then differentiate it, we return to the original function. In other words, differentiation reverses accumulation.
+
+The second part of the Fundamental Theorem of Calculus says that if
+
+$$
+\dfrac{d F}{d x}=f(x),
+$$
+
+then
+
+$$
+\int_a^b f(x)\,d x=F(b)-F(a).
+$$
+
+For example,
+
+$$
+\int_0^1 x^2\,d x
+=
+\left[\dfrac{x^3}{3}\right]_0^1
+=
+\dfrac{1}{3}.
+$$
+
+This result was revolutionary. The area problem, which had once required complicated geometric approximations, could now be solved by finding an antiderivative.
+
+The theorem unified the two historical problems. The tangent problem became differentiation. The area problem became integration. The Fundamental Theorem showed that they are inverse operations.
+
+### From Intuition to Rigor
+
+Early calculus was powerful, but its foundations were not completely rigorous. Mathematicians used infinitesimals and limiting arguments successfully, but the exact meaning of these ideas was not always clear.
+
+This led to criticism and later reform. In the nineteenth century, mathematicians such as Cauchy and Weierstrass rebuilt calculus using precise limit definitions. This made the subject more rigorous and gave a stronger foundation to ideas that had already been used successfully for many years.
+
+This part of the history is important because it shows that mathematics does not always develop in a perfectly logical order. Often, the historical path is closer to this:
+
+$$
+\text{intuition}\rightarrow
+\text{successful calculation}\rightarrow
+\text{theoretical unification}\rightarrow
+\text{rigor}.
+$$
+
+Calculus followed this path. The ideas came first through geometry, motion, and calculation. The rigorous foundation came later.
+
+## 5. Conclusion
+### Conclusion: One Theory from Two Problems
+
+The history of calculus is not only the story of Newton and Leibniz. It is the story of two ancient problems slowly becoming one theory.
+
+The area problem began in ancient geometry and developed through approximation, infinite summation, indivisibles, and integration. The tangent problem became clearer after analytic geometry allowed curves to be written as equations, and it developed into the derivative through methods of secant slopes and limiting processes.
+
+Barrow, Newton, and Leibniz helped reveal and systematize the connection between these two traditions. Finally, the Fundamental Theorem of Calculus showed that differentiation and integration are inverse operations.
+
+Calculus was born when mathematicians realized that local rate of change and global accumulation are two sides of the same mathematical theory.
+
+## References
+
+Boyer, C. B., and Merzbach, U. C. *A History of Mathematics*. Wiley.
+
+Katz, V. J. *A History of Mathematics: An Introduction*. Pearson.
+
+Stewart, J. *Calculus: Early Transcendentals*. Cengage Learning.
+
+Struik, D. J. *A Source Book in Mathematics, 1200-1800*. Princeton University Press.
