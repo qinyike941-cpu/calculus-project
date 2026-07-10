@@ -6,7 +6,78 @@ format:
     toc-depth: 2
     theme: cosmo
 ---
+::: {.callout-note title="Group Information"}
 
+<div class="group-members">
+
+<div class="group-member">
+
+<img src="member1.jpg" class="member-photo">
+
+**Member 1 Name QIN YIKE
+
+MAT2509016
+
+</div>
+
+<div class="group-member">
+
+<img src="member2.jpg" class="member-photo">
+
+**Member 2 Name XU KE
+
+MAT2509029
+
+</div>
+
+<div class="group-member">
+
+<img src="member3.jpg" class="member-photo">
+
+**Member 3 Name JIANG ZHENYANG
+
+CME2409007
+
+</div>
+
+</div>
+
+:::
+
+<style>
+.group-members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+  text-align: center;
+  align-items: start;
+}
+
+.group-member {
+  text-align: center;
+}
+
+.member-photo {
+  width: 190px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto 12px auto;
+}
+
+.group-member p {
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 800px) {
+  .group-members {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 ## Introduction: Two Problems Behind Calculus
 
 The history of calculus can be understood through two old problems. One problem was about areas: how can we find the exact area of a curved region? The other problem was about tangents: how can we find the direction of a curve at a single point?
