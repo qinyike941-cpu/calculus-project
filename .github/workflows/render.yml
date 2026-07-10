@@ -1,0 +1,35 @@
+name: Render Quarto Website
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**.qmd"
+      - "**.jpg"
+      - "**.jpeg"
+      - "**.png"
+      - ".github/workflows/render.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render the QMD file
+        run: quarto render tangents-areas.qmd
+
+      - name: Save the rendered HTML
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Render updated Quarto webpage
+          file_pattern: tangents-areas.html tangents-areas_files/**
