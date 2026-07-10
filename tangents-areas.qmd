@@ -8,14 +8,16 @@ format:
 ---
 ::: {.callout-note title="Group Information"}
 
+Group Name:Hakimi
+
 <div class="group-members">
 
 <div class="group-member">
 
 <img src="member1.jpg" class="member-photo">
 
-**Member 1 Name QIN YIKE
-
+Member 1  
+QIN YIKE
 MAT2509016
 
 </div>
@@ -24,8 +26,8 @@ MAT2509016
 
 <img src="member2.jpg" class="member-photo">
 
-**Member 2 Name XU KE
-
+Member 2 
+XU KE
 MAT2509029
 
 </div>
@@ -34,8 +36,8 @@ MAT2509029
 
 <img src="member3.jpg" class="member-photo">
 
-**Member 3 Name JIANG ZHENYANG
-
+Member 3
+JIANG ZHENYANG
 CME2409007
 
 </div>
